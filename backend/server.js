@@ -189,12 +189,6 @@ app.post("/forgot-password", (req, res) => {
   });
 });
 
-
-
-app.listen(3000, () => {
-  console.log("Server berjalan di port 3000");
-});
-
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
 
@@ -1781,3 +1775,9 @@ setInterval(() => {
     cekJadwal();
 
 }, 30000);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server berjalan di port ${PORT}`);
+});
