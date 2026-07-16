@@ -235,7 +235,7 @@ async function loadJadwal(tanggal){
     try{
 
         const response = await fetch(
-            `http://localhost:3000/lihat-tracker/${user.id}/${tanggal}`
+            `http://https://diet-plan-production-1f24.up.railway.app/lihat-tracker/${user.id}/${tanggal}`
         );
 
         const data = await response.json();
@@ -484,7 +484,7 @@ async function selesaikan(id){
 
         const response = await fetch(
 
-            `http://localhost:3000/jadwal/${id}`,
+            `http://https://diet-plan-production-1f24.up.railway.app/jadwal/${id}`,
 
             {
 
@@ -587,7 +587,7 @@ async function tambahJadwal(){
 
 
     const response = await fetch(
-        "http://localhost:3000/tambah-jadwal-manual",
+        "http://https://diet-plan-production-1f24.up.railway.app/tambah-jadwal-manual",
         {
 
             method:"POST",
@@ -636,7 +636,7 @@ async function generateJadwal(){
     const hari = namaHari[new Date(tanggal).getDay()];
 
     const response = await fetch(
-        "http://localhost:3000/generate-jadwal",
+        "http://https://diet-plan-production-1f24.up.railway.app/generate-jadwal",
         {
             method:"POST",
             headers:{

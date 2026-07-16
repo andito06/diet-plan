@@ -265,7 +265,7 @@ async function handleCredentialResponse(response){
     try{
 
         const hasil = await fetch(
-            "http://localhost:3000/google-login",
+            "http://https://diet-plan-production-1f24.up.railway.app/google-login",
             {
                 method:"POST",
                 headers:{

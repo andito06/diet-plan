@@ -361,7 +361,7 @@ if (!user) {
     window.location.href = "../login.php";
 }
 
-fetch(`http://localhost:3000/target/${user.id}`)
+fetch(`http://https://diet-plan-production-1f24.up.railway.app/target/${user.id}`)
 .then(res => res.json())
 .then(data => {
 
@@ -470,7 +470,7 @@ document.getElementById("barTarget").style.width =
     // ===========================
     // Random Menu
     // ===========================
-    fetch("http://localhost:3000/random-menu")
+    fetch("http://https://diet-plan-production-1f24.up.railway.app/random-menu")
     .then(res => res.json())
     .then(data => {
 
@@ -478,7 +478,7 @@ document.getElementById("barTarget").style.width =
 
             if(item.kategori == "sarapan"){
                 document.getElementById("imgSarapan").src =
-                    "http://localhost:3000/uploads/menu/" + item.foto;
+                    "http://https://diet-plan-production-1f24.up.railway.app/uploads/menu/" + item.foto;
                 document.getElementById("namaSarapan").innerText =
                     item.nama_menu;
                 document.getElementById("kaloriSarapan").innerText =
@@ -487,7 +487,7 @@ document.getElementById("barTarget").style.width =
 
             if(item.kategori == "makan siang"){
                 document.getElementById("imgSiang").src =
-                    "http://localhost:3000/uploads/menu/" + item.foto;
+                    "http://https://diet-plan-production-1f24.up.railway.app/uploads/menu/" + item.foto;
                 document.getElementById("namaSiang").innerText =
                     item.nama_menu;
                 document.getElementById("kaloriSiang").innerText =
@@ -496,7 +496,7 @@ document.getElementById("barTarget").style.width =
 
             if(item.kategori == "camilan"){
                 document.getElementById("imgCamilan").src =
-                    "http://localhost:3000/uploads/menu/" + item.foto;
+                    "http://https://diet-plan-production-1f24.up.railway.app/uploads/menu/" + item.foto;
                 document.getElementById("namaCamilan").innerText =
                     item.nama_menu;
                 document.getElementById("kaloriCamilan").innerText =
@@ -505,7 +505,7 @@ document.getElementById("barTarget").style.width =
 
             if(item.kategori == "makan malam"){
                 document.getElementById("imgMalam").src =
-                    "http://localhost:3000/uploads/menu/" + item.foto;
+                    "http://https://diet-plan-production-1f24.up.railway.app/uploads/menu/" + item.foto;
                 document.getElementById("namaMalam").innerText =
                     item.nama_menu;
                 document.getElementById("kaloriMalam").innerText =

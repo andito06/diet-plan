@@ -218,7 +218,7 @@ form.addEventListener("submit", async function(e){
     }
 
     const response = await fetch(
-        "http://localhost:3000/forgot-password",
+        "http://https://diet-plan-production-1f24.up.railway.app/forgot-password",
         {
             method:"POST",
             headers:{

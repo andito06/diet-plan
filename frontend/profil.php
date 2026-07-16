@@ -192,7 +192,7 @@ document.getElementById("foto").addEventListener("change", function () {
     const formData = new FormData();
     formData.append("foto", file);
 
-    fetch(`http://localhost:3000/profile-photo/${user.id}`, {
+    fetch(`http://https://diet-plan-production-1f24.up.railway.app/profile-photo/${user.id}`, {
         method: "PUT",
         body: formData
     })
@@ -210,7 +210,7 @@ document.getElementById("foto").addEventListener("change", function () {
 // =====================
 // AMBIL DATA PROFILE
 // =====================
-fetch(`http://localhost:3000/profile/${user.id}`)
+fetch(`http://https://diet-plan-production-1f24.up.railway.app/profile/${user.id}`)
 .then(res => res.json())
 .then(data => {
 
@@ -226,7 +226,7 @@ fetch(`http://localhost:3000/profile/${user.id}`)
     // Tampilkan foto profil
     if (data.foto_profil) {
         document.getElementById("preview").src =
-            `http://localhost:3000/uploads/${data.foto_profil}`;
+            `http://https://diet-plan-production-1f24.up.railway.app/uploads/${data.foto_profil}`;
     }
 
 })
@@ -249,7 +249,7 @@ document.getElementById("profilForm").addEventListener("submit", function(e){
 
     };
 
-    fetch(`http://localhost:3000/profile/${user.id}`,{
+    fetch(`http://https://diet-plan-production-1f24.up.railway.app/profile/${user.id}`,{
 
         method:"PUT",
 

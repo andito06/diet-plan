@@ -52,7 +52,7 @@ async function cekJadwal() {
 
     if (!user) return;
 
-    const response = await fetch(`http://localhost:3000/notifikasi/${user.id}`);
+    const response = await fetch(`http://https://diet-plan-production-1f24.up.railway.app/notifikasi/${user.id}`);
 
     const jadwal = await response.json();
 

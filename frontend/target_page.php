@@ -201,7 +201,7 @@ if(!user){
 
 }
 
-fetch(`http://localhost:3000/target/${user.id}`)
+fetch(`http://https://diet-plan-production-1f24.up.railway.app/target/${user.id}`)
 
 .then(res => res.json())
 
@@ -330,7 +330,7 @@ function closeWeightModal(){
 
 function saveTarget(){
 
-    fetch("http://localhost:3000/target",{
+    fetch("http://https://diet-plan-production-1f24.up.railway.app/target",{
 
         method:"POST",
 
@@ -362,7 +362,7 @@ function saveTarget(){
 
 function updateBerat(){
 
-    fetch("http://localhost:3000/tambah-progress",{
+    fetch("http://https://diet-plan-production-1f24.up.railway.app/tambah-progress",{
 
         method:"POST",
 

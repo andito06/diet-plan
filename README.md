@@ -109,7 +109,7 @@ node server.js
 Backend berjalan pada:
 
 ```
-http://localhost:3000
+http://https://diet-plan-production-1f24.up.railway.app
 ```
 
 ## 5. Jalankan XAMPP
