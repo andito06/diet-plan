@@ -25,7 +25,6 @@ app.use(cors({
   credentials: true
 }));
 
-app.options("*", cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -325,7 +324,7 @@ app.post("/google-login", async (req, res) => {
   }
 });
 
-/* app.get("/tambah-jadwal", (req, res) => {
+ app.get("/tambah-jadwal", (req, res) => {
 
   const sql =
     "INSERT INTO jadwal (user_id, kegiatan, waktu, status) VALUES (1, 'Diet pagi', '07:00', 'Belum selesai')";
@@ -340,9 +339,9 @@ app.post("/google-login", async (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/jadwal", (req, res) => {
+ app.get("/jadwal", (req, res) => {
 
   const sql = "SELECT * FROM jadwal WHERE user_id=1";
 
@@ -356,13 +355,13 @@ app.post("/google-login", async (req, res) => {
 
   });
 
-}); */
+}); 
 
 
 
 
 
-/* app.get("/isi-jadwal", (req, res) => {
+ app.get("/isi-jadwal", (req, res) => {
 
   const sql = `
   INSERT INTO rekomendasi_jadwal (hari, jam, kegiatan, kategori, kalori, reminder)
@@ -398,9 +397,9 @@ Jalan cepat 30 menit', 'Aktivitas', 150, 'Lakukan aktivitas fisik setiap hari'),
 
   });
 
-}); */
+}); 
 
-/* app.get("/rekomendasi", (req, res) => {
+ app.get("/rekomendasi", (req, res) => {
 
   const sql = "SELECT * FROM rekomendasi_jadwal";
 
@@ -414,7 +413,7 @@ Jalan cepat 30 menit', 'Aktivitas', 150, 'Lakukan aktivitas fisik setiap hari'),
 
   });
 
-}); */
+}); 
 
 app.post("/generate-jadwal", (req, res) => {
   const { user_id, tanggal, hari } = req.body;
@@ -463,7 +462,7 @@ app.post("/generate-jadwal", (req, res) => {
   });
 });
 
-/* app.get("/program-ringan", (req, res) => {
+ app.get("/program-ringan", (req, res) => {
 
   const sql = `
   INSERT INTO rekomendasi_jadwal (hari, jam, kegiatan, kategori, kalori)
@@ -485,9 +484,9 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/senin", (req, res) => {
+ app.get("/senin", (req, res) => {
 
   const sql =
     "SELECT * FROM rekomendasi_jadwal WHERE hari='Senin'";
@@ -502,9 +501,9 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/total-kalori-senin", (req, res) => {
+app.get("/total-kalori-senin", (req, res) => {
 
   const sql =
     "SELECT hari, SUM(kalori) AS total_kalori FROM rekomendasi_jadwal WHERE hari='Senin' GROUP BY hari";
@@ -519,9 +518,9 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+});
 
-/* app.get("/target-sedang", (req, res) => {
+ app.get("/target-sedang", (req, res) => {
 
   const sql =
     "SELECT * FROM rekomendasi_jadwal WHERE hari='Senin' OR hari='Selasa'";
@@ -536,9 +535,9 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/target-intens", (req, res) => {
+ app.get("/target-intens", (req, res) => {
 
   const sql =
     "SELECT * FROM rekomendasi_jadwal WHERE kategori='Olahraga' OR kategori='Makanan'";
@@ -553,9 +552,9 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/target-ringan", (req, res) => {
+app.get("/target-ringan", (req, res) => {
 
   const sql =
     "SELECT * FROM rekomendasi_jadwal WHERE kategori='Makanan' OR kategori='Snack' OR kategori='Hidrasi'";
@@ -571,10 +570,10 @@ app.post("/generate-jadwal", (req, res) => {
   });
 
 });
- */
+ 
 
 
-/* app.get("/generate-bulanan", (req, res) => {
+app.get("/generate-bulanan", (req, res) => {
 
   const sql = `
   INSERT INTO jadwal_bulanan
@@ -606,9 +605,9 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/hari1", (req, res) => {
+app.get("/hari1", (req, res) => {
 
   const sql =
     "SELECT * FROM jadwal_bulanan WHERE hari_ke=1";
@@ -623,7 +622,7 @@ app.post("/generate-jadwal", (req, res) => {
 
   });
 
-}); */
+});
 
 app.post("/tambah-progress", (req, res) => {
   const { user_id, berat_badan, catatan } = req.body;
@@ -675,7 +674,7 @@ app.post("/tambah-progress", (req, res) => {
   });
 });
 
-/* app.get("/progress", (req, res) => {
+app.get("/progress", (req, res) => {
 
   const sql =
     "SELECT * FROM progress_berat WHERE user_id=1";
@@ -690,9 +689,9 @@ app.post("/tambah-progress", (req, res) => {
 
   });
 
-}); */
+});
 
-/* app.get("/statistik-olahraga", (req, res) => {
+app.get("/statistik-olahraga", (req, res) => {
 
   const sql =
     "SELECT COUNT(*) AS total_olahraga FROM rekomendasi_jadwal WHERE kategori='Olahraga'";
@@ -707,9 +706,9 @@ app.post("/tambah-progress", (req, res) => {
 
   });
 
-}); */
+});
 
-/* app.get("/statistik-kalori", (req, res) => {
+app.get("/statistik-kalori", (req, res) => {
 
   const sql =
     "SELECT SUM(kalori) AS total_kalori FROM rekomendasi_jadwal";
@@ -724,7 +723,7 @@ app.post("/tambah-progress", (req, res) => {
 
   });
 
-}); */
+});
 
 app.get("/random-menu", (req, res) => {
   const kategori = ["sarapan", "makan siang", "camilan", "makan malam"];
@@ -765,7 +764,7 @@ app.get("/random-menu", (req, res) => {
   });
 });
 
-/* app.get("/generate-random-7hari", (req, res) => {
+app.get("/generate-random-7hari", (req, res) => {
 
   const makanan = [
     ["Oatmeal dan pisang", 350],
@@ -828,7 +827,7 @@ app.get("/random-menu", (req, res) => {
 
   });
 
-}); */
+}); 
 
 app.get("/profile/:id", (req, res) => {
   const id = req.params.id;
@@ -916,7 +915,7 @@ app.put("/profile/:id", (req, res) => {
 
 
 
-/* app.get("/daily-tracker", (req, res) => {
+app.get("/daily-tracker", (req, res) => {
 
   const sql = `
   INSERT INTO daily_tracker
@@ -945,7 +944,7 @@ app.put("/profile/:id", (req, res) => {
     }
   });
 
-}); */
+});
 
 
 app.get("/lihat-tracker/:user_id/:tanggal", (req, res) => {
@@ -1046,7 +1045,7 @@ app.post("/tambah-jadwal-manual", (req, res) => {
   );
 });
 
-/* app.get("/generate-random-30hari", (req, res) => {
+app.get("/generate-random-30hari", (req, res) => {
 
   const sarapan = [
     ["Oatmeal pisang dan madu", 350],
@@ -1119,10 +1118,10 @@ app.post("/tambah-jadwal-manual", (req, res) => {
     }
   });
 
-}); */
+}); 
 
 
-/* app.get("/cek-kalori-manual", (req, res) => {
+app.get("/cek-kalori-manual", (req, res) => {
 
   const targetKalori = 1800;
 
@@ -1157,9 +1156,9 @@ app.post("/tambah-jadwal-manual", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/progress-target", (req, res) => {
+app.get("/progress-target", (req, res) => {
 
   const sql =
     "SELECT berat_badan, target_berat FROM users WHERE id=1";
@@ -1209,9 +1208,9 @@ app.post("/tambah-jadwal-manual", (req, res) => {
 
   });
 
-}); */
+}); 
 
-/* app.get("/dashboard", (req, res) => {
+app.get("/dashboard", (req, res) => {
 
   const dashboardData = {};
 
@@ -1277,7 +1276,7 @@ app.post("/tambah-jadwal-manual", (req, res) => {
 
   });
 
-}); */
+});
 
 app.get("/foto-profil", (req, res) => {
 
@@ -1343,7 +1342,7 @@ app.delete("/jadwal/:id", (req, res) => {
   });
 });
 
-/* app.get("/jadwal-hari/:hari", (req, res) => {
+app.get("/jadwal-hari/:hari", (req, res) => {
 
   const hari = req.params.hari;
 
@@ -1360,7 +1359,7 @@ app.delete("/jadwal/:id", (req, res) => {
 
   });
 
-}); */
+});
 
 
 
@@ -1730,7 +1729,7 @@ let notifikasiTerakhir = "";
 // =============================
 // CEK JADWAL DARI DATABASE
 // =============================
-/*async function cekJadwal() {
+async function cekJadwal() {
 
     try {
 
@@ -1768,22 +1767,22 @@ let notifikasiTerakhir = "";
     }
 
 }
-*/
-
-// // =============================
-// // JALANKAN
-// // =============================
-// cekJadwal();
 
 
-// // =============================
-// // CEK SETIAP 30 DETIK
-// // =============================
-// setInterval(() => {
+// =============================
+// JALANKAN
+// =============================
+cekJadwal();
 
-//     cekJadwal();
 
-// }, 30000);
+// =============================
+// CEK SETIAP 30 DETIK
+// =============================
+setInterval(() => {
+
+     cekJadwal();
+
+ }, 30000);
 
 const PORT = process.env.PORT || 3000;
 
