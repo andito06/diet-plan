@@ -198,6 +198,10 @@ app.post("/forgot-password", (req, res) => {
 });
 
 app.post("/login", (req, res) => {
+
+    console.log("LOGIN MASUK");
+    console.log(req.body);
+
   const { email, password } = req.body;
 
   // Validasi input
@@ -1736,7 +1740,7 @@ async function cekJadwal() {
         const user = JSON.parse(localStorage.getItem("user"));
         console.log("User:", user);
 
-        const response = await fetch(`http://https://diet-plan-production-1f24.up.railway.app/notifikasi/${user.id}`);
+        const response = await fetch(`https://diet-plan-production-07c6.up.railway.app/notifikasi/${user.id}`);
 
         const jadwal = await response.json();
 
