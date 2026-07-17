@@ -1772,17 +1772,17 @@ async function cekJadwal() {
 // =============================
 // JALANKAN
 // =============================
-cekJadwal();
+//cekJadwal();
 
 
 // =============================
 // CEK SETIAP 30 DETIK
 // =============================
-setInterval(() => {
+//setInterval(() => {
 
-     cekJadwal();
+ //    cekJadwal();
 
- }, 30000);
+// }, 30000);
 
 const PORT = process.env.PORT || 3000;
 
