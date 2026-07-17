@@ -244,7 +244,7 @@ form.addEventListener("submit", async function(e){
 
     try{
 
-        const response = await fetch("http://localhost:3000/login",{
+        const response = await fetch("https://diet-plan-production-07c6.up.railway.app/login",{
 
             method:"POST",
 
@@ -295,7 +295,7 @@ async function handleCredentialResponse(response){
     try{
 
         const hasil = await fetch(
-            "http://localhost:3000/google-login",
+            "https://diet-plan-production-07c6.up.railway.app/google-login",
             {
                 method:"POST",
                 headers:{

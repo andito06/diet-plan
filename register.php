@@ -218,7 +218,7 @@ form.addEventListener("submit", async function(e){
 
     try{
 
-        const response = await fetch("http://localhost:3000/register",{
+        const response = await fetch("https://diet-plan-production-07c6.up.railway.app/register",{
 
             method:"POST",
 
